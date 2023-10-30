@@ -9,7 +9,7 @@ from config import Config, load_config
 
 redis = Redis(host='localhost')
 storage = RedisStorage(redis=redis)
-config: Config = load_config('/Users/Isa/Desktop/FSM/.env')
+config: Config = load_config('.env')
 
 bot = Bot(config.tg_bot.token)
 dp = Dispatcher(storage=storage)
